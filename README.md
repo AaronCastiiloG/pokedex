@@ -2,7 +2,7 @@
 
 A full-stack web application that allows users to browse Pokémon, search for Pokémon by name, and manage their favorite Pokémon.
 
-The application uses a custom REST API to retrieve Pokémon data from the [PokéAPI](https://pokeapi.co/), while MongoDB stores the user's favorite Pokémon.
+The application uses a custom REST API to retrieve Pokémon data from [PokéAPI](https://pokeapi.co/), while MongoDB stores the user's favorite Pokémon.
 
 ## Features
 
@@ -10,7 +10,7 @@ The application uses a custom REST API to retrieve Pokémon data from the [Poké
 * **Pokémon Search:** Search for a Pokémon by name.
 * **Favorites:** Add and remove Pokémon from favorites.
 * **Persistent Favorites:** Favorite selections are stored in MongoDB and retrieved when the application loads.
-* **REST API:** A custom backend handles communication with the PokéAPI and manages favorites.
+* **REST API:** A custom backend handles communication with PokéAPI and manages favorites.
 
 ## Tech Stack
 
@@ -40,12 +40,12 @@ The repository contains both the frontend and backend applications.
 
 ```text
 pokedex/
-├── frontend/
+├── pokedex-client/
 │   ├── src/
 │   ├── public/
 │   ├── package.json
 │   └── ...
-├── backend/
+├── pokedex-core-api/
 │   ├── src/
 │   ├── .env.example
 │   ├── package.json
@@ -79,7 +79,7 @@ Replace `<repository-url>` with the URL of this repository.
 Navigate to the backend directory:
 
 ```bash
-cd backend
+cd pokedex-core-api
 ```
 
 Install the dependencies:
@@ -112,6 +112,8 @@ MONGODB_URI=mongodb://127.0.0.1:27017/pokedex
 POKEAPI_BASE_URL=https://pokeapi.co/api/v2
 ```
 
+These values are examples. Use the variable names and default values defined in `.env.example`.
+
 Make sure MongoDB is running locally before starting the backend.
 
 Start the backend in development mode:
@@ -130,10 +132,10 @@ This assumes the default port is configured.
 
 ### 3. Configure and Run the Frontend
 
-Open a second terminal and navigate to the frontend directory from the repository root:
+Open a second terminal at the repository root and navigate to the frontend directory:
 
 ```bash
-cd frontend
+cd pokedex-client
 ```
 
 Install the dependencies:
@@ -167,7 +169,7 @@ Favorite endpoints use the `X-User-Id` request header to identify the user.
 
 ## Data Storage
 
-Pokémon information is retrieved from the PokéAPI through the custom backend API. The frontend does not communicate directly with the public PokéAPI.
+Pokémon information is retrieved from PokéAPI through the custom backend API. The frontend does not communicate directly with the public PokéAPI.
 
 MongoDB stores favorite selections associated with a user identifier. Pokémon details are retrieved from the external API rather than stored locally.
 

@@ -130,13 +130,17 @@ For example, I decided to display a message when a Pokémon search returned no r
 The final implementation was reviewed against the assignment's required features, with an emphasis on keeping the solution understandable and avoiding unnecessary complexity.
 
 
-## Improvements
+## Known Limitations and Future Improvements
 
-* I if have integrated the IA to VS Code, like Cursor orr a pro plan for VS Code, It could be more faster and easier.
-* All hardcoded text and labels, move to a file to manage that.
-* Move to other css files all the styles in the HTML tags, MUI components.
-* IN backend change all console.log to library like Winston to show logs.
-* Improve error handler in backend.
-* Improve all process for UUID.
-* Change all the process to get the initial info inside the use effect, using tanstack query
-* Error handler in front end.
+Given the scope and time constraints of this assessment, I prioritized implementing the required functionality while keeping the application simple and maintainable. The following improvements could be considered in a future iteration:
+
+* **AI-assisted development workflow:** Explore more integrated AI-assisted development tools to improve development efficiency.
+* **Centralized text and labels:** Move hardcoded UI text and labels into centralized files to simplify maintenance and future localization.
+* **Styling organization:** Move inline styles and component-specific styling into dedicated style files where appropriate, improving consistency and maintainability.
+* **Structured backend logging:** Replace direct `console.log` calls with a logging library such as Winston to support structured logs and better troubleshooting.
+* **Error handling:** Improve backend error handling and introduce a consistent error-handling strategy in the frontend.
+* **User identification:** Improve the user identification mechanism. The current implementation uses a fixed UUID and does not provide authentication or individual user registration.
+* **Data fetching and caching:** Evaluate TanStack Query for managing server state, including data fetching, caching, loading states, and error handling.
+* **Automated testing:** Add unit and integration tests for critical frontend and backend functionality.
+* **Accessibility and responsive design:** Further evaluate keyboard navigation, accessibility, and the user experience across different screen sizes.
+

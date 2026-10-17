@@ -39,10 +39,10 @@ class App {
         message: 'Pokédex API is running',
       });
     });
-
+    
+    this.app.use(UserIdMiddleware.handle());
     this.app.use('/api', new ApiRoutes().getRouter());
     this.app.use(ErrorMiddleware.handle());
-    this.app.use(UserIdMiddleware.handle());
     this.app.use(NotFoundMiddleware.handle());
   }
 

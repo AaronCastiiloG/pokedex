@@ -4,6 +4,10 @@ A full-stack web application that allows users to browse Pokémon, search for Po
 
 The application uses a custom REST API to retrieve Pokémon data from [PokéAPI](https://pokeapi.co/), while MongoDB stores the user's favorite Pokémon.
 
+# Demo
+
+![Pokédex Demo](./assets/pokedex-demo.gif)
+
 ## Features
 
 * **Pokémon Listing:** Browse Pokémon with their names and images.
